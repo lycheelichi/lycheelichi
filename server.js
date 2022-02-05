@@ -21,18 +21,20 @@ dotenv.config({path:"./config/config.env"});
 
 app = express();
 
-connectDB();
+// connectDB();
 
 const PORT = process.env.PORT || 3000;
 // console.log(process.env.NODE_ENV);
 
 
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}));
 
-app.use(express.static('public'));
+app.use('/portfolio',express.static('views/pages/frontend-projects'));
+app.use('/', express.static('public'));
 
 app.set("view engine","ejs");
-// app.set("views",path.join(__dirname,"views"));
+
+app.set("views",path.join(__dirname,"views"));
 
 // app.use(session({
 //     secret: process.env.SESSION_SECRET,
@@ -42,63 +44,63 @@ app.set("view engine","ejs");
 // }))
 
 
-app.use(express.json())
+app.use(express.json());
 //cookie parser
-app.use(cookieParser())
+app.use(cookieParser());
 //File Upload
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname,'public')))
 
 // security setup ----------------------------------------------------------
 //add mongo data sanitizer 
-app.use(mongoSanitize())
+app.use(mongoSanitize());
 // add helmet middleware 
-app.use(helmet())
+app.use(helmet());
 // add cross-site scripting protection
-app.use(xss())
+app.use(xss());
 
 // http parameter pollution attack
-app.use(hpp())
+app.use(hpp());
 
 //rate limit
-app.enable('trust proxy')
+app.enable('trust proxy');
 
 const limiter = rateLimit({
     windowMs: 15*60*1000,
     max:10000
 })
 
-app.use(limiter)
-app.use('/',limiter)
+app.use(limiter);
+app.use('/',limiter);
 
 // security setup end
 //----------------------------------------------------------
-
 // Dev loggin middleware
 if(process.env.NODE_ENV ==='development'){
     app.use(morgan('dev'))
 }
 
-// Route files require / use
+// home route
 const homeRoutes = require("./routes/homeRoutes")
-app.use('/',homeRoutes)
+app.use('/',homeRoutes);
 
-  
+// portfolio route
+
+const portfolioRoutes = require("./routes/portfolioRoutes")
+app.use('/portfolio',portfolioRoutes);
 
 // user register/ login routes
 const authRoutes = require("./routes/authRoutes");
 app.use('/auth',authRoutes); 
 
-// const { Console } = require("console");
-// app.use("/auth",authRoutes)
 
 // so error message gets modified properly
 app.use(errorHandler);
 
 //404 page not found (default)
-// app.use((req,res)=>{
-//     res.status(404).send('404, Page not found!')
-// })
+app.use((req,res)=>{
+    res.status(404).send('404, Page not found!')
+})
 
 const server = app.listen(PORT,()=>{
     console.log(`Server is awake at ${process.env.NODE_ENV} MODE ON PORT ${PORT}`);
@@ -107,6 +109,6 @@ const server = app.listen(PORT,()=>{
 process.on("unhandledRejection",(err,promise)=>{
     console.log(`Error: ${err.message}`);
     server.close(()=>{
-        process.exit(1)
+        process.exit(1);
     })
 })

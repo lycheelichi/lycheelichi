@@ -1,9 +1,12 @@
 <%- include('components/header')  %> 
-<%- include('components/navbar') %> 
 
+<body>
+<%- include('components/navbar') %> 
+    <div class="main-body">
     <h1><%= greeting %> </h1>
     <h2>from <%= name %> </h2>
+</div>
+</body>
 
-    
 <script> document.title = "Home"</script>
 <%- include('components/footer') %> 
