@@ -1,11 +1,138 @@
 <%- include('../components/header') %> 
+</head>
+
 <body>
     <%- include('../components/navbar') %> 
 <div class="main-body">
-<h2>This is Resume page </h2>
+<h2>Li Qi (LiChi)</h2>
+
+<h3 class="category-title">Programming Language</h3>
+<hr style="padding: 0; margin: 0;">
+<div class="languages-list">
+    <p>C++</p>
+    <p>Javascript</p>
+    <p>Python</p>
+    <p>Java</p>
+    <p>Dart</p>
+</div>
+<h3 class="category-title">Skills</h3>
+<hr>
+<div class="programming-skills">
+    <table class="skills-table">
+        <tr id="frontend-tr">
+            <th class="t-head" >Frontend Development</th>
+            <th>HTML/CSS</th>
+            <th>Javascript</th>
+            <th>Bootstrap</th> 
+        </tr>
+        <tr id="backend-tr">
+            <th class="t-head">Backend Development</th>
+            <th>Node.js</th>
+            <th>Flask</th>
+            <th>Django</th>
+            <th>RESTful API</th>
+            <th>SQL</th>
+            <th>MongoDB</th>
+        </tr>
+        <tr id="mobile-tr">
+            <th class="t-head">Mobile Development</th>
+            <th>Flutter</th>
+        </tr>
+        <tr id="other-tr">
+            <th class="t-head">Other</th>
+            <th >Data Structure & Algorithm</th>
+        </tr>
+
+    </table>
 
 </div>
-<script> document.title = "Resume"</script>
-    
+
+<h3 class="category-title">Experience</h3>
+<hr>
+    <h4 class="creation-title" style="padding: 0;margin: 0;"><a href="https://www.dwight-spiritstore.com"> E-commerce site</a>
+    </h4>
+<p class="detailed-content"> - Built and maintained Dwight School Seoul Spirit Store and its online inventory system. Standard feature includes user registration/login, create/cancel orders, email confirmations, admin order and inventory management
+</p>
+
+<h4  class="creation-title" >
+    Staff Purchase Request App
+</h4>
+<p class="detailed-content">
+    - Designed and built an application / approval system using Python to simplify and replace physical paperwork for school purchase / personal leave applications and approval process.
+</p>
+<h4 class="creation-title" >
+    Report Card Generator
+</h4>
+<p class="detailed-content">
+    - Created an automatic dropdown&selection feature to standardize and simplify report card writing process for school teachers at Dwight School Seoul.
+</p>
+<h3 class="category-title">Other Skills</h3>
+<hr>
+<table class="other-skill-table">
+    <tr style="text-align: start;">
+        <th>
+        Microsoft Office 
+        </th> 
+        <th>
+        Google Workplace
+        </th>
+        <th>
+            Adobe Photoshop / Illustrator / InDesign
+        </th>
+    </tr>
+    <tr style="text-align: start;">
+
+        <th>Photography / Photo Editing</th>
+        <th>Design & Publishing</th>
+
+    </tr>
+
+</table>
+<h3 class="category-title">Languages</h3>
+<hr>
+<div class="human-languages">
+<p>English</p>
+<p>Mandarin Chinese</p>
+<p>Mongolian</p>
+<p>Russian</p>
+</div>
+
+<h3 class="category-title">Other Experience</h3>
+<hr>
+<table class="experience-table">
+    <tr>
+        <th>2017-present</th>
+        <th>Mandarin Chinese Teacher / Web Developer</th>
+        <th>Dwight School Seoul</th>
+        <th>Seoul, South Korea</th>
+    </tr>
+    <tr>
+        <th>2014-2017</th>
+        <th>Mandarin Chinese Teacher</th>
+        <th>International School of Myanmar</th>  
+        <th>Yangon, Myanmar</th>
+    </tr>
+    <tr>
+        <th>2012-2014</th>
+        <th>Education Volunteer</th>
+        <th>Confucius Institute</th>
+        <th>Nakuru, Kenya</th>
+    </tr>
+</table>
+<h3 class="category-title">Education</h3>
+<hr>
+<table class="education-table">
+    <tr>
+        <th>-B.A</th>
+        <th>National University of Mongolia</th>
+        <th>Russian Linguistics</th>
+    </tr>
+</table>
+</div>
+
+<script> document.title = "LiChi Resume"</script>
+
+<script src="../js/resume.js"></script>
+
 </body>
 <%- include('../components/footer') %> 

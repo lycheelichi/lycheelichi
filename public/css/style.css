@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Raleway:ital,wght@0,200;0,300;0,400;1,300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,30 +8,59 @@ body{
     font-family: 'Roboto',sans-serif;
     /* display: flex; */
     /* height: 100%; */
-    overflow: hidden;
+    overflow: scroll;
     margin: 0;
 }
 
 .main-body{
-    padding: 80px 10px;
-    background-color: greenyellow;
-    
+    padding: 80px 30px;
+    background-color: #FBF8F1;
+    width: 90%;
+    overflow:visible;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 444px;
 }
 
+#myName{
+    font-size: 20px;
+    margin-left: 0;
+    float: left;
+}
+
+
+
+/* -------------------------------- */
 .navigation-bar{
     margin: 0;
-    padding: 0;
-    background-color:#C8C6C6;
+    background-color:#666666;
     height:50px;
-    overflow: hidden;
+    /* overflow:visible; */
     position: absolute;
     width: 100%;
-    transition: opacity 2s ease-in ;
+    /* transition: opacity 2s ease-in ; */
+    min-width: 444px;
+    padding-right: 90px;
+}
+
+
+
+@media screen and(max-width:698px) {
+    #burger-icon {
+        display: block;
+    }
+    
+}
+@media screen and(min-width: 745px){
+    #burger-icon {
+        display: none;
+    }
 }
 
 @media screen and (max-width:980px){
     .navigation-bar{
         background-color: burlywood;
+        transition: ease-in;
     }
     .post-box input{
         width: 90%;
@@ -41,24 +71,25 @@ body{
     #post-box-bottom button{
         width: 140%;
     }
+
 }
 
-@media screen and (max-width:400px){
-}
 
 .navbar-items li {
     float: left;
-    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
     display: inline;
     margin-top: 10px;
     transition:all 0.7s;
-    padding: 0px 30px;
+    padding: 0px 4px;
     margin-bottom: 10px;
     cursor: pointer;
 }
+
 .navbar-items li:hover{
     transform: scale(1.2);
 }
+
 .navbar-items {
     float: right;
     margin: 0;
@@ -70,11 +101,10 @@ body{
     color: white;
     list-style-type: none;
     overflow: hidden;
-    padding:14px 30px;
-    font-size: 20px;
+    padding:14px 4vw;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
-    transition:background  0.7s;
-    transition:color 1.2s
     
 }
 
@@ -83,9 +113,102 @@ body{
     color: black;
 }
 
+
 footer{
     position: fixed;
     bottom: 0;
     padding:10px;
     width: 100%;
+    opacity: 0.5;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+
+.languages-list p{
+    font-family: 'Raleway', sans-serif;
+    display:inline;
+    margin: 0px 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.t-head{
+    /* white-space: pre; */
+    font-size: 17px;
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 0;
+    margin:0;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width:650px){
+    .t-head {
+        width: 500px;
+        text-align: center;
+    }
+    .t-head ~ th{
+        display: none;
+    }
+
+}
+
+.skills-table {
+    table-layout: fixed;
+    font-family: 'Raleway', sans-serif;
+
+    width: 100%;
+}
+
+.skills-table tr{
+    padding-left: 10px;
+    padding-right: 10px;
+    /* white-space: pre; */
+}
+
+.other-skill-table{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.creation-title{
+    font-family: 'Raleway', sans-serif Regular 400;
+}
+.experience-table tr{
+    padding-left: 30px;
+    text-align: end;
+
+}
+.experience-table th{
+    word-wrap: break-word;
+    padding: 5px 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+hr{
+    margin-top: 0;
+}
+
+.detailed-content{
+    margin-left: 30px;
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.human-languages p{
+    display: inline;
+    margin-left: 50px ;
+    font-family: 'Raleway', sans-serif;
+}
+
+.category-title{
+    padding: 0;
+    margin-bottom: 5px;
+    font-family: 'Raleway', sans-serif Bold 700;
+}
+
+.education-table {
+    font-family: 'Raleway', sans-serif;
 }

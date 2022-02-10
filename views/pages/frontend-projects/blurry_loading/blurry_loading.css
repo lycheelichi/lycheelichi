@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100%;
+    overflow: hidden;
+    /* margin-right: 0; */
+}
+
+.container{
+    background-image: url("../pictures/hohhot.jpg" );
+    background-repeat: no-repeat;
+    top: 40px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    /* left: 6%; */
+    flex-direction: column;
+    height: 80%;
+    margin: 0 10%;
+    padding: 20px;
+}
+
+.picture-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg{
+    position: relative;
+    top: 10vh; 
+    /* left: 50%; */
+    width: 60vw;
+    /* height: 40vh; */
+    z-index: -1;
+    align-self:center;
+    filter: blur(30px);
+}
+
+.loading-text{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 50%;
+    left: 48%;
+}
+
+.loading-text2{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+
+}

@@ -1,0 +1,50 @@
+<%- include('../../../components/header') %> 
+
+<link rel="stylesheet" href="rotating_navigation.css">
+</head>
+
+<%- include("../../../components/navbar") %> 
+
+<body>
+    
+<div class="container">
+
+    <div class="circle-container">
+        <div class="circle">
+            <button id="close">
+                <i class="fas fa-times">
+                    <button id="open">
+                        <i class="fas fa-bars">
+                        </i>
+                    </button>
+                </i>
+            </button>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Amazing Article</h1>
+        <small>LiChi</small>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptates, non aut magni labore deserunt earum sapiente voluptate. Culpa ipsa cupiditate iusto modi, illo natus, animi fugit ratione vero deserunt sequi officiis expedita quidem quod tempora earum vel. Sunt cupiditate possimus quos nihil?</p>
+        <h3>My Dog</h3>
+        <img src="../pictures/hohhot.jpg" alt="hohhot">
+    </div>
+</div>
+
+<nav>
+    <ul>
+        <li><i class="fas fa-home">Home</i></li>
+        <li><i class="fas fa-user-alt">About</i></li>
+        <li><i class="fas fa-envelope">Contact</i></li>
+
+    </ul>
+</nav>
+
+
+
+
+<script src="rotating_navigation.js"></script>
+<script>document.title="Rotating Navigation"</script>
+</body>
+
+<%- include("../../../components/footer") %> 
